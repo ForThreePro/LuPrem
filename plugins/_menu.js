@@ -2,27 +2,27 @@ import moment from 'moment-timezone'
 import os from 'os'
 
 const CATEGORY_META = {
-config: '⚙️ 𝗖𝗢𝗡𝗙𝗜𝗚',
-main: '🔧 𝗠𝗔𝗜𝗡',
-tools: '🛠️ 𝗧𝗢𝗟𝗦',
-owner: '👑 𝗢𝗪𝗡𝗘𝗥',
-sorteos: '🎯 𝗦𝗢𝗥𝗧𝗘𝗢𝗦',
-fun: '😈 𝗙𝗨𝗡',
-joda: '😎 𝗝𝗢𝗗𝗔',
-ff: '🔫 𝗙𝗙',
-buscadores: '🔍 𝗦𝗘𝗔𝗥𝗖𝗛',
-descargas: '📥 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥',
-grupo: '⚔️ 𝗚𝗥𝗨𝗣𝗢𝗦',
-grupos: '🛡️ 𝗚𝗥𝗨𝗣𝗢',
-gacha: '👥 𝗚𝗥𝗢𝗨𝗣',
-ia: '🤖 𝗜𝗡𝗧𝗘𝗟𝗜𝗚𝗘𝗡𝗖𝗜𝗔 𝗔𝗥𝗧𝗜𝗙𝗜𝗖𝗜𝗔𝗟',
-info: 'ℹ️ 𝗜𝗡𝗙𝗢',
-sticker: '🎨 𝗦𝗧𝗜𝗖𝗞𝗘𝗥',
+config: '⚙️ 𝐂𝐎𝐍𝐅𝐈𝐆',
+main: '🔧 𝐌𝐀𝐈𝐍',
+tools: '🛠️ 𝐇𝐄𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒',
+owner: '👑 𝐎𝐖𝐍𝐄𝐑',
+sorteos: '🎯 𝐒𝐎𝐑𝐓𝐄𝐎𝐒',
+fun: '😼 𝐅𝐔𝐍',
+joda: '😎 𝐉𝐎𝐃𝐀',
+ff: '🔫 𝐅𝐅',
+buscadores: '🔍 𝐁𝐔𝐒𝐂𝐀𝐑',
+descargas: '📥 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
+grupo: '⚔️ 𝐆𝐑𝐔𝐏𝐎𝐒',
+grupos: '🛡️ 𝐆𝐑𝐔𝐏𝐎',
+gacha: '👥 𝐆𝐀𝐂𝐇𝐀',
+ia: '🤖 𝐈𝐀',
+info: 'ℹ️ 𝐈𝐍𝐅𝐎',
+sticker: '🎨 𝐒𝐓𝐈𝐂𝐊𝐄𝐑',
 }
 
 let handler = async (m, { conn }) => {
 try {
-await conn.sendMessage(m.chat, { react: { text: '⚡', key: m.key } })
+await conn.sendMessage(m.chat, { react: { text: '🍜', key: m.key } })
 
 const fecha = moment.tz('America/Lima').format('dddd')
 const fecha2 = moment.tz('America/Lima').format('DD [de] MMMM [de] YYYY')
@@ -49,23 +49,24 @@ for (const plugin of Object.values(global.plugins || {})) {
 }
 
 const userName = m.pushName || 'Usuario'
-const IMG_MENU = 'https://files.evogb.win/4EIjxL.jpg'
+const IMG_MENU = 'https://files.evogb.win/zocch8.jpg' // Banner Garfield
 
-let menuTexto = `⚡ *𝗖𝗬𝗕𝗘𝗥 𝗕𝗢𝗧* 🔥 ୨
+let menuTexto = `🧡━━━━━━━━🧡
+   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼 ୨
 
-⤷ ┇ *𝗦𝗬𝗦𝗧𝗘𝗠:* v3.0 Cyber ：✦ 。
+⤷ ┇ *𝗩𝗲𝗿𝘀𝗶𝗼𝗻:* v3.0 Garfield ：✦ 。
 ╰─ ◈ *𝗢𝗡𝗟𝗜𝗡𝗘* • ${horas}𝗵 ${minutos}𝗺 ${segundos}𝘀
 
-╭─「 👤 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 」─╮
-│ 💀 @${userName}
-│ 💬 "𝗖𝗼𝗻𝗲𝗰𝘁𝗮𝗱𝗼. 𝗟𝗶𝘀𝘁𝗼 𝗽𝗮𝗿𝗮 𝗱𝗼𝗺𝗶𝗻𝗮𝗿"
-╰────────────────╯
+╭─「 🐾 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 」─╮
+│ 😼 @${userName}
+│ 🍜 "𝗖𝗼𝗻𝗲𝗰𝘁𝗮𝗱𝗼. 𝗡𝗼 𝘁𝗼𝗾𝘂𝗲𝘀 𝗺𝗶 𝗹𝗮𝘀𝗮𝗴𝗻𝗮"
+╚━━━━━━━━━━╝
 
-──⚡ *𝗘𝗦𝗧𝗔𝗗𝗜𝗦𝗧𝗜𝗖𝗔𝗦* ╏ 📊
+──🧡 *𝗘𝗦𝗧𝗔𝗗𝗜𝗦𝗧𝗜𝗖𝗔𝗦* ╏ 📊
 👥 *𝗨𝘀𝘂𝗮𝗿𝗶𝗼𝘀:* ${totalUsers} | 📜 *𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀:* ${pluginsCount}
 💾 *𝗥𝗔𝗠:* ${ram}𝗺𝗯 | 🌐 *𝗦𝗲𝗿𝘃𝗶𝗱𝗼𝗿:* ${totalram}𝗴𝗯
 
-──🔧 *𝗦𝗜𝗦𝗧𝗘𝗠𝗔* 🔧──
+──🍜 *𝗦𝗜𝗦𝗧𝗘𝗠𝗔* 🍜──
 📅 *𝗗𝗶𝗮:* ${fecha}
 📆 *𝗙𝗲𝗰𝗵𝗮:* ${fecha2}
 🕐 *𝗛𝗼𝗿𝗮:* ${hora} | 📡 *𝗣𝗶𝗻𝗴:* ${Math.round(performance.now())}𝗺𝘀
@@ -80,7 +81,7 @@ for (const tag of Object.keys(CATEGORY_META)) {
   let icono = '🔧'
   if(tag === 'config') icono = '⚙️'
   if(tag === 'owner') icono = '👑'
-  if(tag === 'fun') icono = '😈'
+  if(tag === 'fun') icono = '😼'
   if(tag === 'ff') icono = '🔫'
   if(tag === 'buscadores') icono = '🔍'
   if(tag === 'descargas') icono = '📥'
@@ -97,14 +98,14 @@ for (const tag of Object.keys(CATEGORY_META)) {
 }
 
 menuTexto += `
-⚡━━━━━━━━━━━━━━━⚡
-🔥 *𝗕𝗢𝗧:* 𝗖𝗬𝗕𝗘𝗥 𝗕𝗢𝗧
-💀 *𝗖𝗥𝗘𝗔𝗗𝗢𝗥:* 𝗪𝗵𝗼𝗶𝘀 𝗬𝗮𝗹𝗹𝗶 𝗰𝗼 👑
-⚡ *𝗩𝗘𝗥𝗦𝗜𝗢𝗡:* 3.0 𝗖𝘆𝗯𝗲𝗿 𝗠𝗮𝘀𝗰𝘂𝗹𝗶𝗻𝗼
+🧡━━━━━━━━🧡
+🔥 *𝗕𝗢𝗧:* 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌
+🐱 *𝗖𝗥𝗘𝗔𝗗𝗢𝗥:* 𝗧𝘂 𝗡𝗼𝗺𝗯𝗿𝗲 👑
+⚡ *𝗩𝗘𝗥𝗦𝗜𝗢𝗡:* 3.0 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗘𝗱𝗶𝘁𝗶𝗼𝗻
 🌐 *𝗪𝗘𝗕:* 𝗴𝗶𝘁𝗵𝘂𝗯.𝗰𝗼𝗺
 
-> "𝗖𝗼𝗻𝗲𝗰𝘁𝗮𝗱𝗼 𝗮𝗹 𝘀𝗶𝘀𝘁𝗲𝗺𝗮. 𝗗𝗼𝗺𝗶𝗻𝗮 𝗼 𝗺𝘂𝗲𝗿𝗲" ⚡
-⚡━━━━━━━━━━━━━━━⚡`
+> "𝗦𝗶 𝘁𝗼𝗰𝗮𝘀 𝗺𝗶 𝗹𝗮𝘀𝗮𝗴𝗻𝗮 𝘁𝗲 𝗯𝗼𝗿𝗼 𝗱𝗲𝗹 𝗴𝗿𝘂𝗽𝗼" 😼
+🧡━━━━━━━━🧡`
 
 await conn.sendMessage(m.chat, {
   image: { url: IMG_MENU },
@@ -113,12 +114,23 @@ await conn.sendMessage(m.chat, {
 }, { quoted: m })
 
 } catch (e) {
-await conn.sendMessage(m.chat, { text: `❌ *𝗦𝗬𝗦𝗧𝗘𝗠 𝗘𝗥𝗢𝗥:* ${e.message}` }, { quoted: m })
+await conn.sendMessage(m.chat, { text: `🧡━━━━━━━━🧡
+   ❌ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐄𝐑𝐎𝐑 ❌
+🧡━━━━━━━━🧡
+
+╭─「 🐾 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
+│
+│ 😼 ${e.message}
+│
+╚━━━━━━━━━━╝
+
+🐱 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮 𝗮𝗿𝗲𝗴𝗹𝗮𝗿𝗹𝗼" 🧡
+`}, { quoted: m })
 }
 }
 
 handler.help = ['menu']
 handler.tags = ['info']
-handler.command = ['menu', 'help', 'menucyber']
+handler.command = ['menu', 'help', 'menugarfield', 'menulu']
 
 export default handler
