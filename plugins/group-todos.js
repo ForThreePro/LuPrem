@@ -5,7 +5,7 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       return;
     }
 
-    const customMessage = args.join(' ') || '⚡ Notificación del Sistema';
+    const customMessage = args.join(' ') || '🍜 Hora de la lasaña';
     const groupMetadata = await conn.groupMetadata(m.chat).catch(() => ({ subject: 'Grupo', participants: [] }));
     const groupName = groupMetadata.subject;
 
@@ -39,7 +39,7 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       if (match2) return match2.bandera;
       const match1 = countryFlags.find(c => c.prefijo.length === 1 && phoneNumber.startsWith(c.prefijo));
       if (match1) return match1.bandera;
-      return '🚩';
+      return '🐾';
     };
 
     // Agrupar participantes por bandera
@@ -50,22 +50,26 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       grouped[flag].push(mem);
     }
 
-    const orderedFlags = countryFlags.map(c => c.bandera).concat(['🚩']);
+    const orderedFlags = countryFlags.map(c => c.bandera).concat(['🐾']);
 
-    // Texto con estética Cyber Bot
-    let messageText = `ᯇ 𝗖𝗬𝗕𝗘𝗥 𝗕𝗢𝗧 💻 ୧
+    // Texto con estética Garfield
+    let messageText = `🧡━━━━━━━━🧡
+   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼
+🧡━━━━━━━━🧡
 
- ⤷ ┇ 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 ：✿ 。
-꒰ ◞⁺⊹ ．grupo • ${groupName}
+╭─「 🍜 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 」─╮
+│
+│ 🐾 𝗚𝗿𝘂𝗽𝗼 : ${groupName}
+│ 😼 𝗠𝗲𝗻𝘀𝗮𝗷𝗲 : ${customMessage}
+│
+╚━━━━━━━━━━╝
 
- ꒱ ׁ. ᘏ 𝗆𝖾𝗇𝗌⍺𝗃𝖾 ׅ 𝆬
-🤖 ${customMessage} ࣪ ꕀ ˚
-> *"Conectando a todos los usuarios"*
+🐱 "𝗧𝗼𝗱𝗼𝘀 𝗮𝗹 𝘀𝗼𝗳𝗮 𝗮𝗵𝗼𝗿𝗮" 🧡
 
-──愛 *INTEGRANTES* ╏ 📊
-👥 Total: ${participants.length} usuarios
+──🍜 *𝗜𝗡𝗧𝗘𝗚𝗥𝗔𝗡𝗧𝗘𝗦* ──
+👥 𝗧𝗼𝘁𝗮𝗹 : ${participants.length} 𝘂𝘀𝘂𝗮𝗿𝗶𝗼𝘀
 
-──💻 *LISTA POR PAÍS* 💻──
+──🐾 *𝗟𝗜𝗦𝗧𝗔 𝗣𝗢𝗥 𝗣𝗔𝗜𝗦* 🐾──
 `
 
     for (const flag of orderedFlags) {
@@ -78,19 +82,20 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       }
     }
 
-    messageText += `.⃟𖥔 ݁💻𖦹˙— *CYBER BOT SYSTEM* —˙𖦹💻꒷
-🤖 Creador: Whois Yallico 👑
-💻 Versión: 3.1.5 Cyber Clean
+    messageText += `
+🧡━━━━━━━━━━━━━━━🧡
+😼 *𝗕𝗢𝗧* : 𝗟𝗨 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌
+🐾 *𝗩𝗘𝗥𝗦𝗜𝗢𝗡* : 1.0 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗣𝗿𝗲𝗺
+🍜 *𝗙𝗥𝗔𝗦𝗘* : "𝗢𝗱𝗶𝗼 𝗹𝗼𝘀 𝗹𝘂𝗻𝗲𝘀"
+🧡━━━━━━━━━━━━━━━🧡
+`;
 
-> *"Sistema conectado a todos"* 💻
- ㅤ└──.✦ ── ⊰ ̟!!.✦. `;
-
-    // NUEVO: Detectar foto del grupo
+    // Foto del grupo
     let img
     try {
       img = await conn.profilePictureUrl(m.chat, 'image') // Foto del grupo
     } catch {
-      img = 'https://files.evogb.win/jgBvm8.jpg' // Fallback cyber
+      img = 'https://files.evogb.win/zocch8.jpg' // Fallback Garfield
     }
 
     await conn.sendMessage(m.chat, {
@@ -100,12 +105,20 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
     }, { quoted: m });
 
   } catch (error) {
-    console.error("[ERROR EN CYBER BOT]:", error);
-    conn.reply(m.chat, `╭─❒ *『 𝗖𝗬𝗕𝗘𝗥 𝗕𝗢𝗧 』* ❒
-│ ❌ *ERROR DE SISTEMA*
+    console.error("[ERROR EN LU BOT]:", error);
+    conn.reply(m.chat, `🧡━━━━━━━━🧡
+   ❌ 𝐄𝐑𝐎𝐑 𝐂𝐑𝐈𝐓𝐈𝐂𝐎 ❌
+🧡━━━━━━━━🧡
+
+╭─「 😼 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
 │
-│ ⚡ *Ocurrió un error al ejecutar el comando*
-╰─────────────────❒`, m);
+│ 🐾 𝗢𝗰𝘂𝗿𝗶𝗼 𝘂𝗻 𝗲𝗿𝗼𝗿
+│ 🍜 𝗮𝗹 𝗲𝗷𝗲𝗰𝘂𝘁𝗮𝗿 𝗲𝗹 𝗰𝗼𝗺𝗮𝗻𝗱𝗼
+│
+╚━━━━━━━━━━╝
+
+😼 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮" 🧡
+`, m);
   }
 };
 
