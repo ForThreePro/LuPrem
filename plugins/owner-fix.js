@@ -25,21 +25,25 @@ var handler = async (m, { conn }) => {
   }
 
   try {
-    await conn.sendMessage(m.chat, { react: { text: '🕒', key: m.key } });
+    await conn.sendMessage(m.chat, { react: { text: '😼', key: m.key } });
     conn.sendPresenceUpdate('composing', m.chat);
 
     const baseDir = path.resolve('./')
     const jsFiles = await getAllJSFiles(baseDir)
 
-    let response = `⚡━━━━━━━━━━━━━━━⚡
-🔍 𝗘𝗦𝗖𝗔𝗡𝗘𝗢 𝗗𝗘 𝗦𝗜𝗦𝗧𝗘𝗠𝗔 🔍
-⚡━━━━━━━━━━━━━━━⚡
+    let response = `🧡━━━━━━━━🧡
+   🔍 𝐄𝐒𝐂𝐀𝐍𝐄𝐎 𝐆𝐀𝐑𝐅𝐈𝐄𝐋𝐃 🔍
+🧡━━━━━━━━🧡
 
-╭─「 𝗜𝗡𝗜𝗖𝗜𝗔𝗡𝗗𝗢 」─╮
-│ 𝗔𝗥𝗖𝗛𝗜𝗩𝗢𝗦: ${jsFiles.length}
-│ 𝗘𝗦𝗧𝗔𝗗𝗢: 𝗔𝗻𝗮𝗹𝗶𝘇𝗮𝗻𝗱𝗼...
-╰──────────────────╯\n\n`
-    
+╭─「 🐾 𝐈𝐍𝐈𝐂𝐈𝐀𝐍𝐃𝐎 」─╮
+│
+│ 📁 𝗔𝗿𝗰𝗵𝗶𝘃𝗼𝘀 : ${jsFiles.length}
+│ 🍜 𝗘𝘀𝘁𝗮𝗱𝗼 : 𝗔𝗻𝗮𝗹𝗶𝘇𝗮𝗻𝗱𝗼...
+│
+╚━━━━━━━━━━╝
+
+`
+
     let hasErrors = false
     let errorCount = 0
 
@@ -49,31 +53,40 @@ var handler = async (m, { conn }) => {
       } catch (error) {
         hasErrors = true;
         errorCount++
-        response += `╭─「 𝗘𝗥𝗢𝗥 #${errorCount} 」─╮\n`
-        response += `│ 📁 𝗔𝗥𝗖𝗛𝗜𝗩𝗢: ${file.replace(baseDir + '/', '')}\n`
-        response += `│ ❌ 𝗗𝗘𝗧𝗔𝗟𝗘: ${error.message.split('\n')[0]}\n`
+        response += `╭─「 ❌ 𝗘𝗥𝗢𝗥 #${errorCount} 」─╮\n`
+        response += `│ 🐾 𝗔𝗿𝗰𝗵𝗶𝘃𝗼 : ${file.replace(baseDir + '/', '')}\n`
+        response += `│ 😼 𝗗𝗲𝘁𝗮𝗹𝗲 : ${error.message.split('\n')[0]}\n`
         response += `╰─────────────────╯\n\n`
       }
     }
 
     if (!hasErrors) {
-      response += `⚡━━━━━━━━━━━━━━━⚡
-✅ 𝗘𝗦𝗖𝗔𝗡𝗘𝗢 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 ✅
-⚡━━━━━━━━━━━━━━━⚡
+      response += `🧡━━━━━━━━🧡
+   ✅ 𝐄𝐒𝐂𝐀𝐍𝐄𝐎 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐎 ✅
+🧡━━━━━━━━🧡
 
-╭─「 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢 」─╮
-│ 𝗘𝗥𝗢𝗥𝗘𝗦: 0
-│ 𝗘𝗦𝗧𝗔𝗗𝗢: 𝗧𝗼𝗱𝗼 𝗲𝗻 𝗼𝗿𝗱𝗲𝗻
-╰──────────────────╯`
+╭─「 🍜 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎 」─╮
+│
+│ 🐾 𝗘𝗿𝗼𝗿𝗲𝘀 : 0
+│ 😼 𝗘𝘀𝘁𝗮𝗱𝗼 : 𝗧𝗼𝗱𝗼 𝗲𝗻 𝗼𝗿𝗱𝗲𝗻
+│
+╚━━━━━━━━━━╝
+
+🐱 "𝗡𝗶 𝘂𝗻 𝗽𝗲𝗹𝗼 𝗱𝗲 𝗢𝗱𝗶𝗲 𝗳𝘂𝗲𝗿𝗮 𝗱𝗲 𝗹𝘂𝗴𝗮𝗿" 🧡
+`
     } else {
-      response = `⚡━━━━━━━━━━━━━━━⚡
-🔴 𝗘𝗦𝗖𝗔𝗡𝗘𝗢 𝗙𝗜𝗡𝗔𝗟𝗜𝗭𝗔𝗗𝗢 🔴
-⚡━━━━━━━━━━━━━━━⚡
+      response = `🧡━━━━━━━━🧡
+   🔴 𝐄𝐒𝐂𝐀𝐍𝐄𝐎 𝐅𝐈𝐍𝐀𝐋𝐈𝐙𝐀𝐃𝐎 🔴
+🧡━━━━━━━━🧡
 
-╭─「 𝗥𝗘𝗦𝗨𝗠𝗘𝗡 」─╮
-│ 𝗔𝗥𝗖𝗛𝗜𝗩𝗢𝗦: ${jsFiles.length}
-│ 𝗘𝗥𝗢𝗥𝗘𝗦: ${errorCount}
-╰─────────────────╯\n\n` + response
+╭─「 📊 𝐑𝐄𝐒𝐔𝐌𝐄𝐍 」─╮
+│
+│ 📁 𝗔𝗿𝗰𝗵𝗶𝘃𝗼𝘀 : ${jsFiles.length}
+│ ❌ 𝗘𝗿𝗼𝗿𝗲𝘀 : ${errorCount}
+│
+╚━━━━━━━━━━╝
+
+` + response
     }
 
     await conn.reply(m.chat, response, m);
@@ -83,17 +96,22 @@ var handler = async (m, { conn }) => {
     });
 
   } catch (err) {
-    conn.reply(m.chat, `⚡━━━━━━━━━━━━━━━⚡
-❌ 𝗘𝗥𝗢𝗥 𝗖𝗥𝗜𝗧𝗜𝗖𝗢 ❌
-⚡━━━━━━━━━━━━━━━⚡
+    conn.reply(m.chat, `🧡━━━━━━━━🧡
+   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼
+🧡━━━━━━━━🧡
 
-╭─「 𝗗𝗘𝗧𝗔𝗟𝗘 」─╮
-│ ${err.message}
-╰─────────────╯`, m);
+╭─「 ❌ 𝐄𝐑𝐎𝐑 𝐂𝐑𝐈𝐓𝐈𝐂𝐎 」─╮
+│
+│ 🐾 ${err.message}
+│
+╚━━━━━━━━━━╝
+
+😼 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮 𝗮𝗿𝗲𝗴𝗹𝗮𝗿𝗹𝗼" 🧡
+`, m);
   }
 }
 
-handler.command = ['revsall'];
+handler.command = ['revsall', 'scan', 'chequeo'];
 handler.help = ['revsall'];
 handler.tags = ['owner'];
 handler.owner = true;
