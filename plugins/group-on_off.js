@@ -22,7 +22,6 @@ let handler = async (m, { conn, args, command, isOwner }) => {
 
 ╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
 │
-│ ${chatData.welcome? on : off} 𝗕𝗶𝗲𝗻𝘃𝗲𝗻𝗶𝗱𝗮
 │ ${chatData.antiLink? on : off} 𝗔𝗻𝘁𝗶𝗟𝗶𝗻𝗸
 │ ${chatData.economy? on : off} 𝗘𝗰𝗼𝗻𝗼𝗺𝗶𝗮
 │ ${chatData.gacha? on : off} 𝗚𝗮𝗰𝗵𝗮
@@ -90,9 +89,6 @@ ${configList}`,
     case 'nsfw':
       chatData.nsfw = status; reply('NSFW'); break;
 
-    case 'bienvenida': case 'welcome':
-      chatData.welcome = status; reply('Bienvenida'); break;
-
     case 'reaccion': case 'reaction':
       chatData.reaction = status; reply('Reacciones'); break;
 
@@ -104,10 +100,10 @@ ${configList}`,
 
     case 'serbot': case 'jadibot': case 'subbots':
       if (!isOwner) return m.reply(`🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ 𝐀𝐂𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐄𝐑𝐎𝐑 」─╮
+╭─「 😼 𝐄𝐑𝐑𝐎𝐑 」─╮
 │
 │ 🐾 𝗦𝗼𝗹𝗼 𝗲𝗹 𝗢𝘄𝗻𝗲𝗿
 │ 🍜 𝗽𝘂𝗲𝗱𝗲 𝘂𝘀𝗮𝗿 𝗲𝘀𝘁𝗼
