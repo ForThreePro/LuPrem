@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, command, isOwner }) => {
   try {
     pp = await conn.profilePictureUrl(m.chat, 'image');
   } catch {
-    pp = 'https://i.imgur.com/8K0mQjP.png'; // default Garfield
+    pp = 'https://files.evogb.win/zocch8.jpg'; // default Garfield
   }
 
   const configList = `
