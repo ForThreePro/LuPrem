@@ -18,18 +18,18 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner, 
             if (m.text.includes(linkThisGroup)) return !0;
         }
 
-        // AVISO CYBER
+        // AVISO GARFIELD - LU BOT PREM
         await conn.sendMessage(m.chat, { 
             text: `
-╔═══「 🚨 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 」═══╗
+🧡━━「 🚨 **LU BOT PREM VIGILA** 」━━🧡
 ║
-║ 𝗗𝗘𝗧𝗘𝗖𝗧𝗔𝗗𝗢 : Enlace Prohibido
-║ 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 : ${user}
-║ 𝗘𝗦𝗧𝗔𝗗𝗢 : ⚠️ Eliminando...
+║ 😼 **DETECTADO** : Enlace prohibido
+║ 👤 **USUARIO** : ${user}
+║ 🍜 **ESTADO** : ⚠️ **Eliminando y sirviendo lasaña**
 ║
 ╚═══════════╝
 
-> 𝙻𝚘𝚜 𝚎𝚗𝚕𝚊𝚌𝚎𝚜 𝚎𝚜𝚝𝚊𝚗 𝚙𝚛𝚘𝚑𝚒𝚋𝚒𝚍𝚘𝚜
+🐱 "**Oye... aquí no se reparten links. Solo lasaña. Bye**"
 `.trim(), 
             mentions: [m.sender] 
         }, { quoted: m });
@@ -38,10 +38,11 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner, 
         if (!isBotAdmin) {
             return conn.sendMessage(m.chat, { 
                 text: `
-╔═══「 ⚠️ 𝐄𝐑𝐑𝐎𝐑 」═══╗
+🧡━━「 😿 **LU BOT PREM TRISTE** 」━━🧡
 ║
-║ No tengo permisos para eliminar
-║ Activenme como Admin
+║ No tengo permisos para expulsar
+║ **Actívenme como Admin** o tendré que ver como mandan links
+║ Y eso me da hambre... y enojo
 ║
 ╚═══════════╝
 `.trim(), 
