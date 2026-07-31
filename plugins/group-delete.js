@@ -1,17 +1,17 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
 
 if (!m.quoted) return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐄𝐑𝐎𝐑 𝐃𝐄 𝐒𝐈𝐒𝐓𝐄𝐌𝐀 ❌
+   ❌ **ERROR DE SISTEMA** ❌
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐈𝐍𝐒𝐓𝐑𝐔𝐂𝐈𝐎𝐍 」─╮
+╭─「 😼 **INSTRUCCION** 」─╮
 │
-│ 🐾 𝗖𝗶𝘁𝗮 𝗲𝗹 𝗺𝗲𝗻𝘀𝗮𝗷𝗲 𝗾𝘂𝗲 𝗱𝗲𝘀𝗲𝗮𝘀
-│ 🍜 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿
+│ 🐾 **Cita el mensaje que deseas**
+│ 🍜 **eliminar**
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗨𝘀𝗮 :.del 𝗰𝗶𝘁𝗮𝗻𝗱𝗼 𝗲𝗹 𝗺𝗲𝗻𝘀𝗮𝗷𝗲" 🧡
+😼 "**Usa .del citando el mensaje**" 🧡
 `, m)
 
 try {
@@ -28,13 +28,14 @@ try {
         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
     } catch {
         return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐅𝐀𝐋𝐎 𝐄𝐍 𝐋𝐀 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐂𝐈𝐎𝐍 ❌
+   ❌ **FALLO EN LA ELIMINACION** ❌
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
+╭─「 🐾 **ESTADO** 」─╮
 │
-│ 😼 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗱𝗼 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝗲𝗹 𝗺𝗲𝗻𝘀𝗮𝗷𝗲
-│ 🍜 𝗔𝗹𝗴𝘂𝗻𝗼𝘀 𝗺𝗲𝗻𝘀𝗮𝗷𝗲𝘀 𝗻𝗼 𝘀𝗲 𝗽𝘂𝗲𝗱𝗲𝗻 𝗯𝗼𝗿𝗿𝗮𝗿
+│ 😼 **No se pudo eliminar el mensaje**
+│ 🍜 **Algunos mensajes no se pueden borrar**
+│ 🐱 **Ni tocando mi Lasaña se arregla**
 │
 ╚━━━━━━━━━━╝
 `, m)
