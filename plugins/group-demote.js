@@ -11,13 +11,13 @@ const handler = async (m, { conn, command }) => {
 
     if (!who) {
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐄𝐑𝐎𝐑 𝐃𝐄 𝐒𝐈𝐒𝐓𝐄𝐌𝐀 ❌
+   ❌ **ERROR DE SISTEMA** ❌
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐈𝐍𝐒𝐓𝐑𝐔𝐂𝐈𝐎𝐍 」─╮
+╭─「 😼 **INSTRUCCION** 」─╮
 │
-│ 🐾 𝗠𝗲𝗻𝗰𝗶𝗼𝗻𝗮 𝗼 𝗰𝗶𝘁𝗮 𝗮𝗹 𝘂𝘀𝘂𝗮𝗿𝗶𝗼
-│ 🍜 𝗘𝗷𝗲𝗺𝗽𝗹𝗼 :.promote @usuario
+│ 🐾 **Menciona o cita al usuario**
+│ 🍜 **Ejemplo** :.promote @usuario
 │
 ╚━━━━━━━━━━╝
 `, m)
@@ -39,13 +39,13 @@ const handler = async (m, { conn, command }) => {
     if (isPromote) {
       if (participant?.admin) {
         return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⚠️ 𝐀𝐕𝐈𝐒𝐎 𝐃𝐄𝐋 𝐒𝐈𝐒𝐓𝐄𝐌𝐀 ⚠️
+   ⚠️ **AVISO DEL SISTEMA** ⚠️
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
+╭─「 🐾 **ESTADO** 」─╮
 │
-│ 😼 @${who.split('@')[0]} 𝘆𝗮 𝗲𝘀 𝗮𝗱𝗺𝗶𝗻
-│ 🍜 𝗡𝗼 𝗽𝘂𝗲𝗱𝗼 𝗱𝗮𝗿𝗹𝗲 2 𝗰𝗼𝗿𝗼𝗻𝗮𝘀
+│ 😼 @${who.split('@')[0]} **ya es admin**
+│ 🍜 **No puedo darle 2 coronas**
 │
 ╚━━━━━━━━━━╝
 `, m, { mentions: [who] })
@@ -54,31 +54,31 @@ const handler = async (m, { conn, command }) => {
       await conn.groupParticipantsUpdate(m.chat, [who], 'promote')
 
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   👑 𝐀𝐒𝐂𝐄𝐍𝐒𝐎 𝐄𝐉𝐄𝐂𝐔𝐓𝐀𝐃𝐎 👑
+   👑 **ASCENSO EJECUTADO** 👑
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐑𝐄𝐏𝐎𝐑𝐓𝐄 」─╮
+╭─「 🐾 **REPORTE** 」─╮
 │
-│ 😼 𝗨𝘀𝘂𝗮𝗿𝗶𝗼 : @${who.split('@')[0]}
-│ 🍜 𝗡𝘂𝗲𝘃𝗼 𝗥𝗮𝗻𝗴𝗼 : 𝗔𝗱𝗺𝗶𝗻𝗶𝘀𝘁𝗿𝗮𝗱𝗼𝗿
-│ 🐾 𝗣𝗼𝗿 : @${m.sender.split('@')[0]}
+│ 😼 **Usuario** : @${who.split('@')[0]}
+│ 🍜 **Nuevo Rango** : **Administrador**
+│ 🐾 **Por** : @${m.sender.split('@')[0]}
 │
 ╚━━━━━━━━━━╝
 
-🐱 "𝗕𝗶𝗲𝗻𝘃𝗲𝗻𝗶𝗱𝗼 𝗮𝗹 𝗰𝗹𝘂𝗯 𝗱𝗲 𝗹𝗮 𝗹𝗮𝘀𝗮𝗴𝗻𝗮" 🧡
+🐱 "**Bienvenido al club de la Lasaña**" 🧡
 `, m, { mentions: [who, m.sender] })
     }
 
     // DEMOTE
     if (protectedOwners.includes(who)) {
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 🛡️ 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 🛡️ **SEGURIDAD** 」─╮
 │
-│ 😼 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗲𝗱𝗲 𝗱𝗲𝗴𝗿𝗮𝗱𝗮𝗿 𝗮𝗹 𝗼𝘄𝗻𝗲𝗿
-│ 🍜 𝗡𝗶 𝗮 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗹𝗼 𝗯𝗮𝗷𝗮𝘀
+│ 😼 **No se puede degradar al Owner**
+│ 🍜 **Ni a Garfield lo bajas**
 │
 ╚━━━━━━━━━━╝
 `, m)
@@ -86,12 +86,12 @@ const handler = async (m, { conn, command }) => {
 
     if (!participant?.admin) {
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⚠️ 𝐀𝐕𝐈𝐒𝐎 𝐃𝐄𝐋 𝐒𝐈𝐒𝐓𝐄𝐌𝐀 ⚠️
+   ⚠️ **AVISO DEL SISTEMA** ⚠️
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
+╭─「 🐾 **ESTADO** 」─╮
 │
-│ 😼 @${who.split('@')[0]} 𝗻𝗼 𝗲𝘀 𝗮𝗱𝗺𝗶𝗻
+│ 😼 @${who.split('@')[0]} **no es admin**
 │
 ╚━━━━━━━━━━╝
 `, m, { mentions: [who] })
@@ -99,13 +99,13 @@ const handler = async (m, { conn, command }) => {
 
     if (who === groupMetadata.owner) {
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 🍜 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 🍜 **SEGURIDAD** 」─╮
 │
-│ 😼 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗲𝗱𝗲 𝗱𝗲𝗴𝗿𝗮𝗱𝗮𝗿 𝗮𝗹 𝗰𝗿𝗲𝗮𝗱𝗼𝗿
-│ 🐾 𝗥𝗲𝘀𝗽𝗲𝘁𝗮 𝗮𝗹 𝗱𝘂𝗲𝗻𝗼 𝗱𝗲𝗹 𝘀𝗼𝗳𝗮
+│ 😼 **No se puede degradar al creador**
+│ 🐾 **Respeta al dueño del sofa**
 │
 ╚━━━━━━━━━━╝
 `, m)
@@ -113,12 +113,12 @@ const handler = async (m, { conn, command }) => {
 
     if (who === conn.user.jid) {
       return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 😼 **SEGURIDAD** 」─╮
 │
-│ 🐾 𝗡𝗼 𝗽𝘂𝗲𝗱𝗼 𝗱𝗲𝗴𝗿𝗮𝗱𝗮𝗿𝗺𝗲 𝗮 𝗺𝗶 𝗺𝗶𝘀𝗺𝗼
+│ 🐾 **No puedo degradarme a mi mismo**
 │
 ╚━━━━━━━━━━╝
 `, m)
@@ -127,32 +127,32 @@ const handler = async (m, { conn, command }) => {
     await conn.groupParticipantsUpdate(m.chat, [who], 'demote')
 
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   🔻 𝐃𝐄𝐆𝐑𝐀𝐃𝐀𝐂𝐈𝐎𝐍 𝐄𝐉𝐄𝐂𝐔𝐓𝐀𝐃𝐀 🔻
+   🔻 **DEGRADACION EJECUTADA** 🔻
 🧡━━━━━━━━🧡
 
-╭─「 🍜 𝐑𝐄𝐏𝐎𝐑𝐓𝐄 」─╮
+╭─「 🍜 **REPORTE** 」─╮
 │
-│ 😼 𝗨𝘀𝘂𝗮𝗿𝗶𝗼 : @${who.split('@')[0]}
-│ 🐾 𝗡𝘂𝗲𝘃𝗼 𝗥𝗮𝗻𝗴𝗼 : 𝗠𝗶𝗲𝗺𝗯𝗿𝗼
-│ 🍜 𝗣𝗼𝗿 : @${m.sender.split('@')[0]}
+│ 😼 **Usuario** : @${who.split('@')[0]}
+│ 🐾 **Nuevo Rango** : **Miembro**
+│ 🍜 **Por** : @${m.sender.split('@')[0]}
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗬𝗮 𝗻𝗼 𝗲𝗿𝗲𝘀 𝗱𝗲𝗹 𝗰𝗹𝘂𝗯 𝗱𝗲 𝗹𝗮 𝗹𝗮𝘀𝗮𝗴𝗻𝗮" 🧡
+😼 "**Ya no eres del club de la Lasaña**" 🧡
 `, m, { mentions: [who, m.sender] })
 
   } catch (e) {
     conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐄𝐑𝐎𝐑 𝐂𝐑𝐈𝐓𝐈𝐂𝐎 ❌
+   ❌ **ERROR CRITICO** ❌
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
+╭─「 🐾 **DETALLE** 」─╮
 │
 │ 😼 ${e.message}
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮" 🧡
+😼 "**Hasta a mi me da flojera**" 🧡
 `, m)
   }
 }
