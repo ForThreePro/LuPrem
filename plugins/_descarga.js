@@ -54,7 +54,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 ║ 🍜 **VISTAS** : ${vid.views.toLocaleString()}
 ║ 🐾 **FORMATO** : ${isVideo? 'MP4 720p' : 'MP3 320kbps'}
 ║
-╚━━「 **EXTRAYENDO LASAGNA DIGITAL** 」━━╝`
+╚━━「 **EXTRAYENDO LASAÑA DIGITAL** 」━━╝`
 
             await conn.sendMessage(m.chat, { image: { url: vid.thumbnail }, caption: cap }, { quoted: m })
             await conn.sendMessage(m.chat, {
