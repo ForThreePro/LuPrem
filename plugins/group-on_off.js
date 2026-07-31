@@ -17,36 +17,36 @@ let handler = async (m, { conn, args, command, isOwner }) => {
 
   const configList = `
 🧡━━━━━━━━🧡
-   ⚙️ 𝐂𝐎𝐍𝐅𝐈𝐆𝐔𝐑𝐀𝐂𝐈𝐎𝐍 ⚙️
+   ⚙️ **CONFIGURACION** ⚙️
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
+╭─「 🐾 **ESTADO** 」─╮
 │
-│ ${chatData.antiLink? on : off} 𝗔𝗻𝘁𝗶𝗟𝗶𝗻𝗸
-│ ${chatData.economy? on : off} 𝗘𝗰𝗼𝗻𝗼𝗺𝗶𝗮
-│ ${chatData.gacha? on : off} 𝗚𝗮𝗰𝗵𝗮
-│ ${chatData.adminonly? on : off} 𝗠𝗼𝗱𝗼 𝗔𝗱𝗺𝗶𝗻
-│ ${chatData.reaction? on : off} 𝗥𝗲𝗮𝗰𝗶𝗼𝗻𝗲𝘀
-│ ${chatData.nsfw? on : off} 𝗡𝗦𝗙𝗪
-│ ${chatData.alerts? on : off} 𝗔𝗹𝗲𝗿𝘁𝗮𝘀
-│ ${chatData.notprefix? on : off} 𝗦𝗶𝗻 𝗣𝗿𝗲𝗳𝗶𝗷𝗼
-│ ${botSettings?.jadibotmd? on : off} 𝗦𝘂𝗯𝗕𝗼𝘁𝘀
+│ ${chatData.antiLink? on : off} **AntiLink**
+│ ${chatData.economy? on : off} **Economia**
+│ ${chatData.gacha? on : off} **Gacha**
+│ ${chatData.adminonly? on : off} **Modo Admin**
+│ ${chatData.reaction? on : off} **Reacciones**
+│ ${chatData.nsfw? on : off} **NSFW**
+│ ${chatData.alerts? on : off} **Alertas**
+│ ${chatData.notprefix? on : off} **Sin Prefijo**
+│ ${botSettings?.jadibotmd? on : off} **SubBots**
 │
 ╚━━━━━━━━━━╝
 
-╭─「 🍜 𝐔𝐒𝐎 」─╮
+╭─「 🍜 **USO** 」─╮
 │.${command} welcome on/off
 │.${command} antilink on/off
 ╚━━━━━━━━━━╝
 
-😼 "𝗡𝗼 𝘁𝗼𝗾𝘂𝗲𝘀 𝗺𝗶 𝗹𝗮𝘀𝗮𝗴𝗻𝗮" 🧡
+😼 "**No toques mi Lasaña**" 🧡
 `.trim();
 
   if (!setting) {
     return conn.sendMessage(m.chat, {
       image: { url: pp },
       caption: `🧡━━━━━━━━🧡
-   😼 *${groupName}* 😼
+   😼 **${groupName}** 😼
 🧡━━━━━━━━🧡
 ${configList}`,
       mentions: [m.sender]
@@ -58,17 +58,17 @@ ${configList}`,
     image: { url: pp },
     caption: `
 🧡━━━━━━━━🧡
-   ✅ 𝐀𝐂𝐓𝐔𝐀𝐋𝐈𝐙𝐀𝐃𝐎 ✅
+   ✅ **ACTUALIZADO** ✅
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐑𝐄𝐏𝐎𝐑𝐓𝐄 」─╮
+╭─「 🐾 **REPORTE** 」─╮
 │
-│ 📌 𝗙𝘂𝗻𝗰𝗶𝗼𝗻 : ${name}
-│ 📊 𝗘𝘀𝘁𝗮𝗱𝗼 : ${status? '✅ ACTIVADO' : '❌ DESACTIVADO'}
+│ 📌 **Funcion** : ${name}
+│ 📊 **Estado** : ${status? '✅ ACTIVADO' : '❌ DESACTIVADO'}
 │
 ╚━━━━━━━━━━╝
 
-🐱 "𝗬𝗮 𝗾𝘂𝗲𝗱𝗼 𝗰𝗼𝗺𝗼 𝗲𝗻 𝗲𝗹 𝘀𝗼𝗳𝗮" 🧡
+🐱 "**Ya quedo como en el sofa. No toquen nada**" 🧡
 `.trim(),
     mentions: [m.sender]
   }, { quoted: m });
@@ -100,13 +100,13 @@ ${configList}`,
 
     case 'serbot': case 'jadibot': case 'subbots':
       if (!isOwner) return m.reply(`🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐄𝐑𝐑𝐎𝐑 」─╮
+╭─「 😼 **ERROR** 」─╮
 │
-│ 🐾 𝗦𝗼𝗹𝗼 𝗲𝗹 𝗢𝘄𝗻𝗲𝗿
-│ 🍜 𝗽𝘂𝗲𝗱𝗲 𝘂𝘀𝗮𝗿 𝗲𝘀𝘁𝗼
+│ 🐾 **Solo el Owner**
+│ 🍜 **puede usar esto**
 │
 ╚━━━━━━━━━━╝
 `);
@@ -117,12 +117,12 @@ ${configList}`,
       return conn.sendMessage(m.chat, {
         image: { url: pp },
         caption: `🧡━━━━━━━━🧡
-   ⚠️ 𝐄𝐑𝐎𝐑 ⚠️
+   ⚠️ **ERROR** ⚠️
 🧡━━━━━━━━🧡
 
-╭─「 ❌ 𝐎𝐏𝐂𝐈𝐎𝐍 」─╮
+╭─「 ❌ **OPCION** 」─╮
 │
-│ 🐾 𝗢𝗽𝗰𝗶𝗼𝗻 𝗻𝗼 𝘃𝗮𝗹𝗶𝗱𝗮
+│ 🐾 **Opcion no valida**
 │
 ╚━━━━━━━━━━╝
 
