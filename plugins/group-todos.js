@@ -5,7 +5,7 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       return;
     }
 
-    const customMessage = args.join(' ') || '🍜 Hora de la lasaña';
+    const customMessage = args.join(' ') || '🍜 **Hora de la Lasaña**';
     const groupMetadata = await conn.groupMetadata(m.chat).catch(() => ({ subject: 'Grupo', participants: [] }));
     const groupName = groupMetadata.subject;
 
@@ -27,7 +27,7 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       { prefijo: '91', bandera: '🇮🇳' }, { prefijo: '61', bandera: '🇦🇺' },
       { prefijo: '64', bandera: '🇳🇿' }, { prefijo: '1', bandera: '🇺🇸' },
       { prefijo: '7', bandera: '🇷🇺' }, { prefijo: '63', bandera: '🇵🇭' },
-      { prefijo: '95', bandera: '🇲🇲' }
+      { prefijo: '95', bandera: '🇲' }
     ];
 
     const getCountryFlag = (mem) => {
@@ -54,22 +54,22 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
 
     // Texto con estética Garfield
     let messageText = `🧡━━━━━━━━🧡
-   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼
+   😼 **LU BOT PREM** 😼
 🧡━━━━━━━━🧡
 
-╭─「 🍜 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 」─╮
+╭─「 🍜 **NOTIFICACION** 」─╮
 │
-│ 🐾 𝗚𝗿𝘂𝗽𝗼 : ${groupName}
-│ 😼 𝗠𝗲𝗻𝘀𝗮𝗷𝗲 : ${customMessage}
+│ 🐾 **Grupo** : ${groupName}
+│ 😼 **Mensaje** : ${customMessage}
 │
 ╚━━━━━━━━━━╝
 
-🐱 "𝗧𝗼𝗱𝗼𝘀 𝗮𝗹 𝘀𝗼𝗳𝗮 𝗮𝗵𝗼𝗿𝗮" 🧡
+🐱 "**Todos al sofa ahora**" 🧡
 
-──🍜 *𝗜𝗡𝗧𝗘𝗚𝗥𝗔𝗡𝗧𝗘𝗦* ──
-👥 𝗧𝗼𝘁𝗮𝗹 : ${participants.length} 𝘂𝘀𝘂𝗮𝗿𝗶𝗼𝘀
+──🍜 **INTEGRANTES** ──
+👥 **Total** : ${participants.length} **usuarios**
 
-──🐾 *𝗟𝗜𝗦𝗧𝗔 𝗣𝗢𝗥 𝗣𝗔𝗜𝗦* 🐾──
+──🐾 **LISTA POR PAIS** 🐾──
 `
 
     for (const flag of orderedFlags) {
@@ -84,9 +84,9 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
 
     messageText += `
 🧡━━━━━━━━━━━━━━━🧡
-😼 *𝗕𝗢𝗧* : 𝗟𝗨 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌
-🐾 *𝗩𝗘𝗥𝗦𝗜𝗢𝗡* : 1.0 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗣𝗿𝗲𝗺
-🍜 *𝗙𝗥𝗔𝗦𝗘* : "𝗢𝗱𝗶𝗼 𝗹𝗼𝘀 𝗹𝘂𝗻𝗲𝘀"
+😼 **BOT** : **LU BOT PREM**
+🐾 **VERSION** : 1.0 **Garfield Prem**
+🍜 **FRASE** : "**Odio los lunes**"
 🧡━━━━━━━━━━━━━━━🧡
 `;
 
@@ -107,17 +107,17 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
   } catch (error) {
     console.error("[ERROR EN LU BOT]:", error);
     conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐄𝐑𝐎𝐑 𝐂𝐑𝐈𝐓𝐈𝐂𝐎 ❌
+   ❌ **ERROR CRITICO** ❌
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
+╭─「 😼 **DETALLE** 」─╮
 │
-│ 🐾 𝗢𝗰𝘂𝗿𝗶𝗼 𝘂𝗻 𝗲𝗿𝗼𝗿
-│ 🍜 𝗮𝗹 𝗲𝗷𝗲𝗰𝘂𝘁𝗮𝗿 𝗲𝗹 𝗰𝗼𝗺𝗮𝗻𝗱𝗼
+│ 🐾 **Ocurrio un error**
+│ 🍜 **al ejecutar el comando**
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮" 🧡
+😼 "**Hasta a mi me da flojera**" 🧡
 `, m);
   }
 };
