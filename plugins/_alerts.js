@@ -1,4 +1,3 @@
-let WAMessageStubType = (await import('@whiskeysockets/baileys')).default
 import fs from 'fs'
 import path from 'path'
 import { getBotConfig } from '../lib/botconfig.js'
@@ -38,43 +37,43 @@ handler.before = async function (m, { conn }) {
         try {
             banner = await conn.profilePictureUrl(m.chat, 'image')
         } catch {
-            banner = 'https://files.evogb.win/zocch8.jpg'
+            banner = 'https://files.evogb.win/K3I3BL.jpg'
         }
     }
 
-    // DISEÑO GARFIELD PROMOTE
+    // DISEÑO GARFIELD PROMOTE - LU BOT PREM
     const admingp = `
-🧡━━「 👑 𝐀𝐒𝐂𝐄𝐍𝐒𝐎 𝐃𝐄𝐋 𝐒𝐎𝐅𝐀 」━━🧡
+🧡━━「 👑 **ASCENSO DEL SOFA** 」━━🧡
 ║
-║ 😼 𝗧𝗔𝗥𝗚𝗘𝗧 : ${userTag}
-║ 🍜 𝗦𝗧𝗔𝗧𝗨𝗦 : ✅ 𝗥𝗔𝗡𝗚𝗢 𝗔𝗦𝗜𝗚𝗡𝗔𝗗𝗢
-║ 🐾 𝗕𝗬 : ${adminTag}
+║ 😼 **TARGET** : ${userTag}
+║ 🍜 **STATUS** : ✅ **RANGO ASIGNADO POR LU BOT PREM**
+║ 🐾 **BY** : ${adminTag}
 ║
-╠━━「 𝐏𝐄𝐑𝐌𝐈𝐒𝐎𝐒 𝐃𝐄 𝐋𝐀𝐒𝐀𝐆𝐍𝐀 」━━╣
+╠━━「 **PERMISOS DE LASAGNA** 」━━╣
 ║ [✓] Expulsar / Promover
 ║ [✓] Editar Info Grupo
 ║ [✓] Cambiar Config
 ║ [✓] Anuncios
 ╚═══════════╝
 
-😼 "𝙴𝚕 𝚙𝚘𝚍𝚎𝚛 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚌𝚞𝚒𝚍𝚊𝚛 𝚕𝚊 𝚌𝚘𝚖𝚒𝚍𝚊"
+😼 "**Felicidades humano... ahora puedes cuidar mi lasaña. No la cagues**"
 `.trim()
 
-    // DISEÑO GARFIELD DEMOTE
+    // DISEÑO GARFIELD DEMOTE - LU BOT PREM
     const noadmingp = `
-🧡━━「 🔒 𝐃𝐄𝐒𝐂𝐄𝐍𝐒𝐎 𝐃𝐄𝐋 𝐒𝐎𝐅𝐀 」━━🧡
+🧡━━「 🔒 **DESCENSO DEL SOFA** 」━━🧡
 ║
-║ 😼 𝗧𝗔𝗥𝗚𝗘𝗧 : ${userTag}
-║ 🍜 𝗦𝗧𝗔𝗧𝗨𝗦 : ❌ 𝗥𝗔𝗡𝗚𝗢 𝗥𝗘𝗩𝗢𝗖𝗔𝗗𝗢
-║ 🐾 𝗕𝗬 : ${adminTag}
+║ 😼 **TARGET** : ${userTag}
+║ 🍜 **STATUS** : ❌ **RANGO REVOCADO POR LU BOT PREM**
+║ 🐾 **BY** : ${adminTag}
 ║
-╠━━「 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 」━━╣
+╠━━「 **ACCESO DENEGADO** 」━━╣
 ║ [✗] Sin permisos de admin
 ║ [✗] Comandos bloqueados
 ║ [✗] Solo miembro del sofa
 ╚═══════════╝
 
-🐱 "𝚂𝚒𝚗 𝚛𝚊𝚗𝚐𝚘, 𝚜𝚒𝚗 𝚕𝚊𝚜𝚊𝚐𝚗𝚊"
+🐱 "**Ay que pena... sin rango, sin lasaña. Vuelve cuando traigas comida y cariño**"
 `.trim()
 
     // LIMPIAR SESSION SI KICKEAN BOT
@@ -95,7 +94,7 @@ handler.before = async function (m, { conn }) {
         await conn.sendMessage(m.chat, {
             image: { url: banner },
             caption: admingp,
-      ...context
+     ...context
         }, { quoted: null })
         return
     }
@@ -105,7 +104,7 @@ handler.before = async function (m, { conn }) {
         await conn.sendMessage(m.chat, {
             image: { url: banner },
             caption: noadmingp,
-      ...context
+     ...context
         }, { quoted: null })
         return
     }
