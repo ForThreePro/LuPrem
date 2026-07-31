@@ -6,17 +6,17 @@ let handler = async (m, { conn }) => {
   let q = m.quoted? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼
+   😼 **LU BOT PREM** 😼
 🧡━━━━━━━━🧡
 
-╭─「 ⚠️ 𝐀𝐕𝐈𝐒𝐎 」─╮
+╭─「 ⚠️ **AVISO** 」─╮
 │
-│ 🐾 𝗥𝗲𝘀𝗽𝗼𝗻𝗱𝗲 𝗮 𝘂𝗻 𝗮𝗿𝗰𝗵𝗶𝘃𝗼
-│ 🍜 𝗩𝗮𝗹𝗶𝗱𝗼𝘀 : 𝗜𝗺𝗮𝗴𝗲𝗻, 𝗩𝗶𝗱𝗲𝗼, 𝗔𝘂𝗱𝗶𝗼, 𝗗𝗼𝗰
+│ 🐾 **Responde a un archivo**
+│ 🍜 **Validos** : **Imagen, Video, Audio, Doc**
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗡𝗶 𝗢𝗱𝗶𝗲 𝘀𝘂𝗯𝗶𝗿𝗶𝗮 𝗲𝘀𝗼" 🧡
+😼 "**Ni Odie subiria eso**" 🧡
 `, m)
 
   try {
@@ -28,19 +28,19 @@ let handler = async (m, { conn }) => {
     if (!link.success) throw new Error()
 
     let txt = `🧡━━━━━━━━🧡
-   ☁️ 𝐀𝐑𝐂𝐇𝐈𝐕𝐎 𝐒𝐔𝐁𝐈𝐃𝐎 ☁️
+   ☁️ **ARCHIVO SUBIDO** ☁️
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
+╭─「 🐾 **DETALLE** 」─╮
 │
-│ 🔗 𝗘𝗻𝗹𝗮𝗰𝗲 : ${link.url}
-│ 🆔 𝗜𝗗 : ${link.id}
-│ 📊 𝗧𝗮𝗺𝗮𝗻̃𝗼 : ${formatBytes(media.length)}
-│ 🍜 𝗦𝗲𝗿𝘃𝗶𝗱𝗼𝗿 : 𝗖𝗮𝘀𝗮 𝗱𝗲 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱
+│ 🔗 **Enlace** : ${link.url}
+│ 🆔 **ID** : ${link.id}
+│ 📊 **Tamaño** : ${formatBytes(media.length)}
+│ 🍜 **Servidor** : **Casa de Garfield**
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗔𝗿𝗰𝗵𝗶𝘃𝗼 𝗴𝘂𝗮𝗿𝗱𝗮𝗱𝗼 𝗲𝗻 𝗲𝗹 𝘀𝗼𝗳𝗮" 🧡
+😼 "**Archivo guardado en el sofa junto a mi Lasaña**" 🧡
 `
 
     await conn.sendFile(m.chat, media, 'garfield_' + link.url.split('.').pop(), txt, m)
@@ -49,26 +49,26 @@ let handler = async (m, { conn }) => {
     console.error(e)
     await conn.sendMessage(m.chat, { react: { text: '❌', key: m.key } })
     await conn.reply(m.chat, `🧡━━━━━━━━🧡
-   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼
+   😼 **LU BOT PREM** 😼
 🧡━━━━━━━━🧡
 
-╭─「 ❌ 𝐄𝐑𝐎𝐑 」─╮
+╭─「 ❌ **ERROR** 」─╮
 │
-│ 🐾 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗱𝗼 𝘀𝘂𝗯𝗶𝗿
-│ 🍜 𝗜𝗻𝘁𝗲𝗻𝘁𝗮 𝗱𝗲 𝗻𝘂𝗲𝘃𝗼
+│ 🐾 **No se pudo subir**
+│ 🍜 **Intenta de nuevo**
 │
 ╚━━━━━━━━━━╝
 
-😼 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮" 🧡
+😼 "**Hasta a mi me da flojera**" 🧡
 `, m)
   }
 }
 
-handler.help = ['upp', 'tourl']
-handler.tags = ['tools']
-handler.command = ['upp', 'tourl', 'nube']
+handler.help = ['upp', 'tourl'];
+handler.tags = ['tools'];
+handler.command = ['upp', 'tourl', 'nube'];
 
-export default handler
+export default handler;
 
 function formatBytes(bytes) {
   if (bytes === 0) return '0 B'
