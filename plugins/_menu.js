@@ -2,22 +2,22 @@ import moment from 'moment-timezone'
 import os from 'os'
 
 const CATEGORY_META = {
-config: '⚙️ 𝐂𝐎𝐍𝐅𝐈𝐆',
-main: '🔧 𝐌𝐀𝐈𝐍',
-tools: '🛠️ 𝐇𝐄𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒',
-owner: '👑 𝐎𝐖𝐍𝐄𝐑',
-sorteos: '🎯 𝐒𝐎𝐑𝐓𝐄𝐎𝐒',
-fun: '😼 𝐅𝐔𝐍',
-joda: '😎 𝐉𝐎𝐃𝐀',
-ff: '🔫 𝐅𝐅',
-buscadores: '🔍 𝐁𝐔𝐒𝐂𝐀𝐑',
-descargas: '📥 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
-grupo: '⚔️ 𝐆𝐑𝐔𝐏𝐎𝐒',
-group: '🛡️ 𝐆𝐑𝐔𝐏𝐎',
-gacha: '👥 𝐆𝐀𝐂𝐇𝐀',
-ia: '🤖 𝐈𝐀',
-info: 'ℹ️ 𝐈𝐍𝐅𝐎',
-sticker: '🎨 𝐒𝐓𝐈𝐂𝐊𝐄𝐑',
+config: '⚙️ **CONFIG**',
+main: '🔧 **MAIN**',
+tools: '🛠️ **HERRAMIENTAS**',
+owner: '👑 **OWNER**',
+sorteos: '🎯 **SORTEOS**',
+fun: '😼 **FUN**',
+joda: '😎 **JODA**',
+ff: '🔫 **FF**',
+buscadores: '🔍 **BUSCAR**',
+descargas: '📥 **DESCARGAS**',
+grupo: '⚔️ **GRUPOS**',
+group: '🛡️ **GRUPO**',
+gacha: '👥 **GACHA**',
+ia: '🤖 **IA**',
+info: 'ℹ️ **INFO**',
+sticker: '🎨 **STICKER**',
 }
 
 let handler = async (m, { conn }) => {
@@ -52,24 +52,24 @@ const userName = m.pushName || 'Usuario'
 const IMG_MENU = 'https://files.evogb.win/zocch8.jpg' // Banner Garfield
 
 let menuTexto = `🧡━━━━━━━━🧡
-   😼 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌 😼 ୨
+   😼 **LU BOT PREM** 😼 ୨
 
-⤷ ┇ *𝗩𝗲𝗿𝘀𝗶𝗼𝗻:* v3.0 Garfield ：✦ 。
-╰─ ◈ *𝗢𝗡𝗟𝗜𝗡𝗘* • ${horas}𝗵 ${minutos}𝗺 ${segundos}𝘀
+⤷ ┇ **Version:** v3.0 Garfield ：✦ 。
+╰─ ◈ **ONLINE** • ${horas}h ${minutos}m ${segundos}s
 
-╭─「 🐾 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 」─╮
+╭─「 🐾 **USUARIO** 」─╮
 │ 😼 @${userName}
-│ 🍜 "𝗖𝗼𝗻𝗲𝗰𝘁𝗮𝗱𝗼. 𝗡𝗼 𝘁𝗼𝗾𝘂𝗲𝘀 𝗺𝗶 𝗹𝗮𝘀𝗮𝗴𝗻𝗮"
+│ 🍜 "**Conectado. No toques mi Lasaña**"
 ╚━━━━━━━━━━╝
 
-──🧡 *𝗘𝗦𝗧𝗔𝗗𝗜𝗦𝗧𝗜𝗖𝗔𝗦* ╏ 📊
-👥 *𝗨𝘀𝘂𝗮𝗿𝗶𝗼𝘀:* ${totalUsers} | 📜 *𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀:* ${pluginsCount}
-💾 *𝗥𝗔𝗠:* ${ram}𝗺𝗯 | 🌐 *𝗦𝗲𝗿𝘃𝗶𝗱𝗼𝗿:* ${totalram}𝗴𝗯
+──🧡 **ESTADISTICAS** ╏ 📊
+👥 **Usuarios:** ${totalUsers} | 📜 **Comandos:** ${pluginsCount}
+💾 **RAM:** ${ram}mb | 🌐 **Servidor:** ${totalram}gb
 
-──🍜 *𝗦𝗜𝗦𝗧𝗘𝗠𝗔* 🍜──
-📅 *𝗗𝗶𝗮:* ${fecha}
-📆 *𝗙𝗲𝗰𝗵𝗮:* ${fecha2}
-🕐 *𝗛𝗼𝗿𝗮:* ${hora} | 📡 *𝗣𝗶𝗻𝗴:* ${Math.round(performance.now())}𝗺𝘀
+──🍜 **SISTEMA** 🍜──
+📅 **Dia:** ${fecha}
+📆 **Fecha:** ${fecha2}
+🕐 **Hora:** ${hora} | 📡 **Ping:** ${Math.round(performance.now())}ms
 
 `
 
@@ -86,7 +86,7 @@ for (const tag of Object.keys(CATEGORY_META)) {
   if(tag === 'buscadores') icono = '🔍'
   if(tag === 'descargas') icono = '📥'
   if(tag === 'grupo') icono = '⚔️'
-  if(tag === 'grupos') icono = '🛡️'
+  if(tag === 'group') icono = '🛡️'
   if(tag === 'gacha') icono = '👥'
   if(tag === 'ia') icono = '🤖'
   if(tag === 'info') icono = 'ℹ️'
@@ -99,12 +99,12 @@ for (const tag of Object.keys(CATEGORY_META)) {
 
 menuTexto += `
 🧡━━━━━━━━🧡
-🔥 *𝗕𝗢𝗧:* 𝐋𝐔 𝐁𝐎𝐓 𝐏𝐑𝐄𝐌
-🐱 *𝗖𝗥𝗘𝗔𝗗𝗢𝗥:* 𝗧𝘂 𝗡𝗼𝗺𝗯𝗿𝗲 👑
-⚡ *𝗩𝗘𝗥𝗦𝗜𝗢𝗡:* 3.0 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗘𝗱𝗶𝘁𝗶𝗼𝗻
-🌐 *𝗪𝗘𝗕:* 𝗴𝗶𝘁𝗵𝘂𝗯.𝗰𝗼𝗺
+🔥 **BOT:** **LU BOT PREM**
+🐱 **CREADOR:** **Tu Nombre** 👑
+⚡ **VERSION:** 3.0 **Garfield Edition**
+🌐 **WEB:** **github.com**
 
-> "𝗦𝗶 𝘁𝗼𝗰𝗮𝘀 𝗺𝗶 𝗹𝗮𝘀𝗮𝗴𝗻𝗮 𝘁𝗲 𝗯𝗼𝗿𝗼 𝗱𝗲𝗹 𝗴𝗿𝘂𝗽𝗼" 😼
+> "**Si tocas mi Lasaña te borro del grupo**" 😼
 🧡━━━━━━━━🧡`
 
 await conn.sendMessage(m.chat, {
@@ -115,16 +115,16 @@ await conn.sendMessage(m.chat, {
 
 } catch (e) {
 await conn.sendMessage(m.chat, { text: `🧡━━━━━━━━🧡
-   ❌ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐄𝐑𝐎𝐑 ❌
+   ❌ **SYSTEM ERROR** ❌
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐃𝐄𝐓𝐀𝐋𝐄 」─╮
+╭─「 🐾 **DETALLE** 」─╮
 │
 │ 😼 ${e.message}
 │
 ╚━━━━━━━━━━╝
 
-🐱 "𝗛𝗮𝘀𝘁𝗮 𝗮 𝗺𝗶 𝗺𝗲 𝗱𝗮 𝗳𝗹𝗼𝗷𝗲𝗿𝗮 𝗮𝗿𝗲𝗴𝗹𝗮𝗿𝗹𝗼" 🧡
+🐱 "**Hasta a mi me da flojera arreglarlo**" 🧡
 `}, { quoted: m })
 }
 }
