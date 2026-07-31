@@ -4,13 +4,13 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (!user) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ❌ 𝐄𝐑𝐎𝐑 𝐃𝐄 𝐒𝐈𝐒𝐓𝐄𝐌𝐀 ❌
+   ❌ **ERROR DE SISTEMA** ❌
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐈𝐍𝐒𝐓𝐑𝐔𝐂𝐈𝐎𝐍 」─╮
+╭─「 😼 **INSTRUCCION** 」─╮
 │
-│ 🐾 𝗠𝗲𝗻𝗰𝗶𝗼𝗻𝗮 𝗼 𝗰𝗶𝘁𝗮 𝗮𝗹 𝘂𝘀𝘂𝗮𝗿𝗶𝗼
-│ 🍜 𝗘𝗷𝗲𝗺𝗽𝗹𝗼 :.kick @usuario
+│ 🐾 **Menciona o cita al usuario**
+│ 🍜 **Ejemplo** :.kick @usuario
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -24,12 +24,12 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (user === m.sender) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 🐾 **SEGURIDAD** 」─╮
 │
-│ 😼 𝗡𝗼 𝗽𝘂𝗲𝗱𝗲𝘀 𝗲𝘅𝗽𝘂𝗹𝘀𝗮𝗿𝘁𝗲 𝗮 𝘁𝗶 𝗺𝗶𝘀𝗺𝗼
+│ 😼 **No puedes expulsarte a ti mismo**
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -37,12 +37,12 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (user === conn.user.jid) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 🍜 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 🍜 **SEGURIDAD** 」─╮
 │
-│ 😼 𝗡𝗼 𝗽𝘂𝗲𝗱𝗼 𝗲𝘅𝗽𝘂𝗹𝘀𝗮𝗿𝗺𝗲 𝗮 𝗺𝗶 𝗺𝗶𝘀𝗺𝗼
+│ 😼 **No puedo expulsarme a mi mismo**
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -50,13 +50,13 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (user === ownerGroup) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 🛡️ 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 🛡️ **SEGURIDAD** 」─╮
 │
-│ 🐾 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗲𝗱𝗲 𝗲𝘅𝗽𝘂𝗹𝘀𝗮𝗿 𝗮𝗹 𝗰𝗿𝗲𝗮𝗱𝗼𝗿
-│ 😼 𝗥𝗲𝘀𝗽𝗲𝘁𝗮 𝗮𝗹 𝗱𝘂𝗲𝗻𝗼 𝗱𝗲𝗹 𝘀𝗼𝗳𝗮
+│ 🐾 **No se puede expulsar al creador**
+│ 😼 **Respeta al dueño del sofa**
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -64,13 +64,13 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (user === ownerBot || protectedOwners.includes(user)) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⛔ 𝐀𝐂𝐄𝐒𝐎 𝐃𝐄𝐍𝐄𝐆𝐀𝐃𝐎 ⛔
+   ⛔ **ACCESO DENEGADO** ⛔
 🧡━━━━━━━━🧡
 
-╭─「 😼 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃 」─╮
+╭─「 😼 **SEGURIDAD** 」─╮
 │
-│ 🐾 𝗡𝗼 𝘀𝗲 𝗽𝘂𝗲𝗱𝗲 𝗲𝘅𝗽𝘂𝗹𝘀𝗮𝗿 𝗮𝗹 𝗼𝘄𝗻𝗲𝗿
-│ 🍜 𝗡𝗶 𝗮 𝗚𝗮𝗿𝗳𝗶𝗲𝗹𝗱 𝗹𝗼 𝘀𝗮𝗰𝗮𝘀
+│ 🐾 **No se puede expulsar al Owner**
+│ 🍜 **Ni a Garfield lo sacas**
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -80,12 +80,12 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
 
   if (!participant) {
     return conn.reply(m.chat, `🧡━━━━━━━━🧡
-   ⚠️ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐍𝐎 𝐄𝐍𝐂𝐎𝐍𝐓𝐑𝐀𝐃𝐎 ⚠️
+   ⚠️ **USUARIO NO ENCONTRADO** ⚠️
 🧡━━━━━━━━🧡
 
-╭─「 🐾 𝐄𝐒𝐓𝐀𝐃𝐎 」─╮
+╭─「 🐾 **ESTADO** 」─╮
 │
-│ 😼 ${targetName} 𝘆𝗮 𝗻𝗼 𝗲𝘀𝘁𝗮 𝗲𝗻 𝗲𝗹 𝗴𝗿𝘂𝗽𝗼
+│ 😼 ${targetName} **ya no esta en el grupo**
 │
 ╚━━━━━━━━━━╝
 `, m);
@@ -94,18 +94,18 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
   await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
 
   await conn.reply(m.chat, `🧡━━━━━━━━🧡
-   🔻 𝐄𝐗𝐏𝐔𝐋𝐒𝐈𝐎𝐍 𝐄𝐉𝐄𝐂𝐔𝐓𝐀𝐃𝐀 🔻
+   🔻 **EXPULSION EJECUTADA** 🔻
 🧡━━━━━━━━🧡
 
-╭─「 🍜 𝐑𝐄𝐏𝐎𝐑𝐓𝐄 」─╮
+╭─「 🍜 **REPORTE** 」─╮
 │
-│ 😼 𝗨𝘀𝘂𝗮𝗿𝗶𝗼 : ${targetName}
-│ 🐾 𝗔𝗰𝗶𝗼𝗻 : 𝗘𝗫𝗣𝗨𝗟𝗦𝗔𝗗𝗢
-│ 🍜 𝗣𝗼𝗿 : @${m.sender.split('@')[0]}
+│ 😼 **Usuario** : ${targetName}
+│ 🐾 **Accion** : **EXPULSADO**
+│ 🍜 **Por** : @${m.sender.split('@')[0]}
 │
 ╚━━━━━━━━━━╝
 
-🐱 "𝗟𝗮 𝗽𝘂𝗲𝗿𝘁𝗮 𝘀𝗲 𝗰𝗲𝗿𝗼 𝘆 𝘀𝗲 𝗮𝗰𝗮𝗯𝗼 𝗹𝗮 𝗹𝗮𝘀𝗮𝗴𝗻𝗮 𝗽𝗮𝗿𝗮 𝗲𝗹" 🧡
+🐱 "**La puerta se cerro y se acabo la Lasaña para el**" 🧡
 `, m, { mentions: [m.sender] });
 };
 
