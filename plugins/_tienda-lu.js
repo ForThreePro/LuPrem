@@ -164,7 +164,7 @@ await conn.reply(m.chat, texto, m)
 handler.help = [
 'spam | Servicio De Spam Masivo',
 'design | Precios Luu Design',
-'diamantes | Diamantes FF por país'
+'diamantes | Perú / Chile / México / Argentina / Bolivia / Uruguay'
 ]
 handler.tags = ['tienda']
 handler.command = /^(spam|design|diamantes)$/i
